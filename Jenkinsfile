@@ -10,13 +10,13 @@ pipeline {
       
       stage('Codecheckout') {
          steps {
-           git clone https://github.com/harshareddy7797/Pipeline.git
+           git branch: 'main', url: 'https://github.com/harshareddy7797/Pipeline.git'
          }
       }
       
       stage('Codebuild') {
          steps {
-            echo build
+            echo 'build'
          }
       }
    }
