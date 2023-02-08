@@ -7,14 +7,16 @@ pipeline {
             cleanWs()
          }
       }
-      stage('Welcome') {
-         steps {
-            echo 'Welcome'
-         }
-      }
+      
       stage('Codecheckout') {
          steps {
-           git branch: 'main', url: 'https://github.com/harshareddy7797/Pipeline.git'
+           git clone https://github.com/harshareddy7797/Pipeline.git
+         }
+      }
+      
+      stage('Codebuild') {
+         steps {
+            echo build
          }
       }
    }
