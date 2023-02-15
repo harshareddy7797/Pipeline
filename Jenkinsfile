@@ -16,7 +16,7 @@ pipeline {
       
       stage('Codebuild') {
          steps {
-            echo 'build'
+            docker build . -t image1
          }
       }
    }
