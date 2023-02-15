@@ -16,8 +16,7 @@ pipeline {
       
       stage('Codebuild') {
          steps {
-            docker build . -t image1
-            docker run -dp 8080:8080 --name container1
+             ./server.js
          }
       }
    }
