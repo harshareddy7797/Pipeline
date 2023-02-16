@@ -1,6 +1,9 @@
 pipeline {
    agent any
-   
+   options { 
+        skipDefaultCheckout()
+        buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '30'))
+    }
    stages {
         stage('Cleanup') {
          steps {
