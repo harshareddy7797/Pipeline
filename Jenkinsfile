@@ -18,8 +18,7 @@ pipeline {
       
       stage('Codebuild') {
          steps {
-             sh 'npm install'
-             sh 'node server.js'
+             sh 'docker build . -t image1'
          }
       }
    }
