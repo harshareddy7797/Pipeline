@@ -1,7 +1,8 @@
 pipeline {
    agent any
    
-   
+    tools {nodejs "node"}
+     tools {Docker "docker"}
   
    stages {
         stage('Cleanup') {
