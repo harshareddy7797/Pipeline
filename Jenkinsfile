@@ -1,5 +1,7 @@
 pipeline {
    agent any
+   
+    tools {nodejs "node"}
    options { 
         skipDefaultCheckout()
         buildDiscarder(logRotator(numToKeepStr: '5', daysToKeepStr: '30'))
