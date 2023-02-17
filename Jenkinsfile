@@ -19,7 +19,7 @@ pipeline {
       
       stage('Codebuild') {
          steps {
-             sh 'docker build . -t image1'
+             bat 'docker build . -t image1'
          }
       }
    }
